@@ -1,0 +1,14 @@
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: flex-start;
+}
+
+.title {
+  color: #252f40;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1px;
+}
