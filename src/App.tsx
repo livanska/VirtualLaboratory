@@ -1,11 +1,14 @@
-import React from 'react';
-import './App.css';
-import Button  from './components/shared/Button';
+import React from "react";
+import "./App.css";
+import FieldGroup from "./components/shared/FieldGroup";
 
 function App() {
   return (
     <div className="App">
-<Button />
+      <FieldGroup
+        title="Module"
+        fieldProps={{ multiline: true, rows: 5 }}
+      />
     </div>
   );
 }
