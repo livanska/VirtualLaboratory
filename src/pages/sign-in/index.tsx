@@ -1,9 +1,9 @@
 import logo from "../../assets/logo.svg";
 import figure from "../../assets/backgroundFigure.svg";
 
-import Button from "../shared/Button";
-import FieldGroup from "../shared/FieldGroup";
-import GlassPanel from "../shared/GlassPanel";
+import Button from "../../components/shared/Button";
+import FieldGroup from "../../components/shared/FieldGroup";
+import GlassPanel from "../../components/shared/GlassPanel";
 
 import styles from "./styles.module.scss";
 

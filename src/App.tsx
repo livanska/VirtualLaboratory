@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import SignIn from "./components/sign-in";
+import SignIn from "./pages/sign-in";
 import background from "./assets/background.svg";
 
 function App() {
