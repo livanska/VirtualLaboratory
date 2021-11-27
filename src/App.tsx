@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import background from "./assets/background.svg";
-import SignUp from "./pages/sign-up";
+import ModulesPage from "./pages/modules-page";
 
 function App() {
   return (
     <div>
       <img src={background} className="background" />
 
-      <SignUp />
+      <ModulesPage />
     </div>
   );
 }
