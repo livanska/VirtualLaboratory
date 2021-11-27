@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import SignIn from "./pages/sign-in";
+import { RootRouter } from './routes/RootRouter';
 import background from "./assets/background.svg";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div>
       <img src={background} className="background" />
 
-      <SignIn />
+      <RootRouter />
     </div>
   );
 }

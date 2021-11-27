@@ -4,8 +4,10 @@ import figure from "../../assets/backgroundFigure.svg";
 import Button from "../../components/shared/Button";
 import FieldGroup from "../../components/shared/FieldGroup";
 import GlassPanel from "../../components/shared/GlassPanel";
+import {Link} from 'react-router-dom'
 
 import styles from "./styles.module.scss";
+import { LoginRoute } from "../../routes/routes";
 
 const SignIn = () => {
   return (
@@ -27,11 +29,8 @@ const SignIn = () => {
 
             <p className={styles.registerText}>
               Don’t have an account yet?{" "}
-              <a className={styles.registerLink} href="#">
-                Register now
-              </a>
+              <Link className={styles.registerLink} to={LoginRoute}>Register now</Link>
             </p>
-
             <Button buttonstyle="primary" className={styles.signInButton}>
               Log In
             </Button>
