@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { RootRouter } from './routes/RootRouter';
 import background from "./assets/background.svg";
+import SignUp from "./pages/sign-up";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <img src={background} className="background" />
 
       <RootRouter />
+
     </div>
   );
 }
