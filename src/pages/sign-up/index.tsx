@@ -4,7 +4,7 @@ import figure from "../../assets/backgroundFigure.svg";
 import Button from "../../components/shared/Button";
 import FieldGroup from "../../components/shared/FieldGroup";
 import GlassPanel from "../../components/shared/GlassPanel";
-
+import background from "../../assets/background.svg";
 import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
 import { LoginRoute } from "../../routes/routes";
@@ -13,7 +13,7 @@ const SignUp = () => {
   return (
     <>
       <img src={figure} className={styles.figure} />
-
+      <div className={styles.background} />
       <div className={styles.signUp}>
         <GlassPanel className={styles.signUpBody}>
           <p className={styles.title}>Virtual Laboratory</p>

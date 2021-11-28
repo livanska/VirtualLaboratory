@@ -13,7 +13,7 @@ const SignIn = () => {
   return (
     <>
       <img src={figure} className={styles.figure} />
-
+      <div className={styles.background} />
       <div className={styles.signIn}>
         <GlassPanel className={styles.signInBody}>
           <p className={styles.title}>Virtual Laboratory</p>
