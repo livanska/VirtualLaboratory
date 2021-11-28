@@ -1,10 +1,10 @@
 export const LoginRoute = '/login';
 export const RegisterRoute = '/register';
 
-export const ModellingRoute = '/';
+export const MainPageRoute = '/';
 
 //student
-export const MainPageRoute = '/main';
+export const ModellingRoute = '/modelling';
 export const ProfileRoute = '/profile';
 
 //admin

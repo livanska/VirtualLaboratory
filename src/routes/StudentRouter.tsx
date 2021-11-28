@@ -2,20 +2,26 @@ import React from 'react';
 import  SignIn  from '../pages/sign-in';
 import  SignUp  from '../pages/sign-up';
 import { Routes , Route } from 'react-router-dom';
-import { ModellingRoute, ProfileRoute, LoginRoute, RegisterRoute} from './routes';
+import { MainPageRoute, ModellingRoute, ProfileRoute, LoginRoute, RegisterRoute} from './routes';
+import ModulesPage from '../pages/modules-page';
 
 export const routes = [
 
   {
-    path: ModellingRoute,
+    path: MainPageRoute,
     title: 'Learning',
     exact: true,
-    component: SignIn,
+    component: ModulesPage,
   },
-
   {
     path: ProfileRoute,
     title: 'Personal Profile',
+    exact: true,
+    component: SignIn,
+  },
+  {
+    path: ModellingRoute,
+    title: 'Modelling',
     exact: true,
     component: SignIn,
   },

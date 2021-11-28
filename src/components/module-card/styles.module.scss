@@ -4,8 +4,11 @@
   border-radius: 5px;
 
   backdrop-filter: blur(30px) opacity(92%);
-
+  height: 264px;
   display: flex;
+  z-index: 2;
+  width: 830px;
+  margin-bottom: 40px;
 }
 
 .image {
@@ -34,19 +37,25 @@
   font-weight: bold;
   font-size: 24px;
 
-  margin: 5px 0px;
+  margin: 0px;
+  margin-top: 10px;
 }
 
 .moduleInfo {
   display: flex;
   column-gap: 10px;
   margin: 0px;
+  margin-top: -5px;
+  p{
+    margin: 0;
+  }
 }
 
 .description {
   font-size: 18px;
   line-height: 29px;
   color: #67748e;
+  margin: 0;
 }
 
 .buttonStart {
@@ -64,4 +73,8 @@
 
 .bold {
   font-weight: bold;
+}
+.buttonLink{
+  text-decoration: none;
+  color: #163220;
 }

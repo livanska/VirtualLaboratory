@@ -3,11 +3,9 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     width: 141.42px;
     height: 44.12px;
-    // margin-top: auto !important;
-    // margin-bottom: auto !important;
     vertical-align: middle;
     align-self: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .navbar {
     height: 10%;
@@ -46,8 +44,8 @@
 }
 
 .navItemActive {
-    margin-top: 2px;
-    border: 2px solid rgba(144, 178, 157, 0.84) !important;
+    margin-top: 5px;
+    border-bottom: 4px solid rgba(144, 178, 157, 0.84) !important;
     border-radius: 5px;
 }
 .navItemUnactive {

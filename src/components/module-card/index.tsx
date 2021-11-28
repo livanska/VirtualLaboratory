@@ -1,4 +1,6 @@
 import classNames from "classnames";
+import { Link } from "react-router-dom";
+import { ModellingRoute } from "../../routes/routes";
 import Module from "../../types/module";
 import Button from "../shared/Button";
 import styles from "./styles.module.scss";
@@ -48,7 +50,7 @@ const ModuleCard = (props: Props) => {
             [styles.disabled]: disabled,
           })}
         >
-          Start
+         {title ==='Modelling'? <Link to={ModellingRoute} className={styles.buttonLink} >Start</Link>:'START'}
         </Button>
       </div>
     </div>

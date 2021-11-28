@@ -5,15 +5,11 @@ import background from "./assets/background.svg";
 
 /** Should be received by api call
 */
-localStorage.setItem('user',"Student")
+localStorage.setItem('user', "Student")
 
 function App() {
   return (
-    <div>
-      <img src={background} className="background" />
       <RootRouter />
-
-    </div>
   );
 }
 
