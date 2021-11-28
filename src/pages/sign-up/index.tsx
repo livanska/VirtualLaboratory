@@ -6,6 +6,8 @@ import FieldGroup from "../../components/shared/FieldGroup";
 import GlassPanel from "../../components/shared/GlassPanel";
 
 import styles from "./styles.module.scss";
+import { Link } from "react-router-dom";
+import { LoginRoute } from "../../routes/routes";
 
 const SignUp = () => {
   return (
@@ -19,7 +21,7 @@ const SignUp = () => {
             Created to learn Software Development Life Cycle.
           </p>
           <p className={styles.editLater}>
-            You can edit this in your Persona Profile later.
+            You can edit this in your Personal Profile later.
           </p>
 
           <div className={styles.signUpForm}>
@@ -33,9 +35,7 @@ const SignUp = () => {
 
             <p className={styles.loginText}>
               Already a member?{" "}
-              <a className={styles.loginLink} href="#">
-                Login
-              </a>
+              <Link className={styles.loginLink} to={LoginRoute}>Register now</Link>
             </p>
 
             <Button buttonstyle="primary" className={styles.signUpButton}>

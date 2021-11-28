@@ -1,5 +1,6 @@
 import React from 'react';
 import  SignIn  from '../pages/sign-in';
+import  SignUp  from '../pages/sign-up';
 import { Routes , Route } from 'react-router-dom';
 import { ModellingRoute, AdminPanelRoute, LoginRoute, RegisterRoute} from './routes';
 
@@ -28,7 +29,7 @@ export const routes = [
     path: RegisterRoute,
     title: 'Register',
     exact: true,
-    component: SignIn
+    component: SignUp
   },
 ];
 
