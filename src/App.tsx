@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import background from "./assets/background.svg";
-import ModulesPage from "./pages/modules-page";
+import UmlModelling from "./pages/uml-modelling";
 
 function App() {
   return (
-    <div>
-      <img src={background} className="background" />
+    <div className="app">
+      <UmlModelling />
 
-      <ModulesPage />
+      <img src={background} alt="background" className="background" />
     </div>
   );
 }
