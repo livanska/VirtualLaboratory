@@ -1,15 +1,37 @@
 .adminPanel {
   height: calc(100vh - 80px);
-  margin-top: 80px;
   padding: 30px;
-  overflow-y: auto;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background: url("../../assets/background.svg");
+  background-color: rgba(144, 178, 157, 0.2);
+  display: flex;
 }
 
 .panel {
-  height: 100%;
-  padding: 20px 100px;
+  height: calc(100vh - 140px);
+  overflow-y: auto;
+  //   height: 100%;
+  margin: auto;
+  margin-top: 110px;
+//   padding: 20px 100px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+}
+
+.content {
+  padding: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 23px;
+  column-gap: 123px;
+  justify-content: space-evenly;
 }
 
 .left {
@@ -17,12 +39,11 @@
 }
 
 .right {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  overflow-y: auto;
 }
-
 
 .form {
   display: flex;
@@ -31,6 +52,6 @@
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
