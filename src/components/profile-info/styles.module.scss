@@ -1,0 +1,44 @@
+.profileInfo {
+  display: flex;
+}
+
+.image {
+  height: 200px;
+  width: 200px;
+}
+
+.mainInformation {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  justify-content: space-evenly;
+}
+
+.nameField {
+  display: flex;
+}
+
+.fullName {
+  font-weight: bold;
+  font-size: 48px;
+  margin: 0px;
+}
+
+.pen {
+  cursor: pointer;
+}
+
+.role {
+  font-size: 18px;
+  line-height: 7px;
+  color: #3d3d3d;
+  opacity: 0.5;
+  margin: -30px 0 0;
+}
+
+.email {
+  font-size: 18px;
+  line-height: 29px;
+  color: #2f2f2f;
+  margin: 0px;
+}
