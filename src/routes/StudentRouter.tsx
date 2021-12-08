@@ -4,6 +4,8 @@ import  SignUp  from '../pages/sign-up';
 import { Routes , Route } from 'react-router-dom';
 import { MainPageRoute, ModellingRoute, ProfileRoute, LoginRoute, RegisterRoute} from './routes';
 import ModulesPage from '../pages/modules-page';
+import UmlModellingWrapper from '../pages/uml-modelling';
+import StudentProfile from '../pages/student-profile';
 
 export const routes = [
 
@@ -17,13 +19,13 @@ export const routes = [
     path: ProfileRoute,
     title: 'Personal Profile',
     exact: true,
-    component: SignIn,
+    component: StudentProfile,
   },
   {
     path: ModellingRoute,
     title: 'Modelling',
     exact: true,
-    component: SignIn,
+    component: UmlModellingWrapper,
   },
   {
     path: LoginRoute,
