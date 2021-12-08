@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss";
 import Button from "../shared/Button";
+import ProfileInfo from "../profile-info";
 interface ICardProps {
 
     passed: boolean,
@@ -12,7 +13,7 @@ interface ICardProps {
 }
 
 const ProfileTaskCard = (props: ICardProps) => {
-    return (
+    return (<>
         <div className={styles.card}>
             <div className={styles.statusRow}>
                 <div className={props.passed ? styles.colorGreen : styles.colorRed} />
@@ -31,6 +32,7 @@ const ProfileTaskCard = (props: ICardProps) => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
