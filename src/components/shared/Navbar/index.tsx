@@ -17,6 +17,7 @@ const role = localStorage.getItem("user");
 const Navbar = (props: Props) => {
   const location = useLocation();
   const logOut = () => {
+    localStorage.setItem('user','');
     window.location.href = LoginRoute;
   };
 

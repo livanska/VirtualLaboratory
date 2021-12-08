@@ -1,0 +1,64 @@
+.card {
+    width: 668px;
+    height: 312px;
+    background-color: white;
+    border: 1px solid #ececec;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: block;
+}
+
+.colorRed {
+    background: #d54646;
+    width: 68px;
+    height: 60.51px;
+    border-bottom-right-radius: 5px;
+}
+
+.colorGreen {
+    background: #469a68;
+    width: 68px;
+    height: 60.51px;
+    border-bottom-right-radius: 5px;
+}
+.status {
+    margin: auto;
+    margin-right: 40px;
+    display: block;
+    font-size: 36px;
+    line-height: 29px;
+}
+
+.statusRow {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.task {
+    font-size: 18px;
+    line-height: 29px;
+    margin: 15px;
+}
+
+.bottomRow {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 30%
+}
+
+.buttons{
+    display: flex;
+    padding-top: 30px;
+    margin-left:21px;
+    margin-bottom: -25px;
+    column-gap: 21px;
+}
+
+.info{
+    font-size: 18px; 
+    margin: auto;
+    margin-top: -35px;
+    margin-right: 25px;
+}
