@@ -7,7 +7,6 @@ import testingImage from "../../assets/modules/Testing.png";
 import planningImage from "../../assets/modules/Planning.png";
 import codingImage from "../../assets/modules/Coding.png";
 import Navbar from "../../components/shared/Navbar";
-import background from "../../assets/background.svg";
 
 const modules: Module[] = [
   {
@@ -17,7 +16,8 @@ const modules: Module[] = [
     passedTaskAmount: 0,
     allTaskAmount: 0,
     disabled: true,
-    description:  "Process of determining user expectations for a new or modified product. Involves frequent communication with system users to determine specific feature expectations, avoidance of feature creep and documentation of all aspects of the project development process from start to finish.",
+    description:
+      "Process of determining user expectations for a new or modified product. Involves frequent communication with system users to determine specific feature expectations, avoidance of feature creep and documentation of all aspects of the project development process from start to finish.",
   },
   {
     title: "Modelling",
@@ -62,14 +62,15 @@ const modules: Module[] = [
 ];
 
 const ModulesPage = () => {
-  return (<>
-  <Navbar/>
-  <div  className={styles.background}/>
-    <div className={styles.modulesPage}>
-      {modules.map((module: Module) => (
-        <ModuleCard module={module} />
-      ))}
-    </div></>
+  return (
+    <>
+      <div className={styles.background} />
+      <div className={styles.modulesPage}>
+        {modules.map((module: Module) => (
+          <ModuleCard module={module} />
+        ))}
+      </div>
+    </>
   );
 };
 

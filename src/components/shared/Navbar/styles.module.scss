@@ -1,68 +1,70 @@
 @import "../../../styles/colors.scss";
 .logo {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    width: 141.42px;
-    height: 44.12px;
-    vertical-align: middle;
-    align-self: center;
-    margin-top: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 141.42px;
+  height: 44.12px;
+  vertical-align: middle;
+  align-self: center;
 }
 .navbar {
-    height: 10%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.89);
-    box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.06), 0px 20px 26px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(10px);
-    border-bottom-left-radius: 11px;
-    border-bottom-right-radius: 11px;
-    background-color: $white !important;
-    position: fixed;
-    justify-content: space-between !important;
-    display: block !important;
+  height: 80px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.89);
+  box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.06), 0px 20px 26px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  background-color: $white !important;
+  position: fixed;
+  justify-content: space-between !important;
+  display: flex !important;
+  flex-direction: row !important;
 }
 
 .navItems {
-    margin-top: auto;
-    margin-bottom: auto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 26px;
-    float: right;
-    display: inline-flex !important;
-    margin-top: 35px;
-    margin-right: 50px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  float: right;
+  display: inline-flex !important;
+  align-items: center;
+  margin-right: 50px;
 }
 .navItem {
-    color: black !important;
-    text-decoration: none !important;
-    display: inline;
-    cursor: pointer;
-    padding-left: 50px;
-    white-space: nowrap;
-    width: 100%;
+  color: black !important;
+  text-decoration: none !important;
+  display: inline;
+  cursor: pointer;
+  padding-left: 50px;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .navItemActive {
-    margin-top: 5px;
-    border-bottom: 4px solid rgba(144, 178, 157, 0.84) !important;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(144, 178, 157, 0.84);
     border-radius: 5px;
+    margin-top: 5px;
+  }
 }
 .navItemUnactive {
-    display: none;
+  display: none;
 }
 .image {
-    border-radius: 50%;
-    width: 39px;
-    height: 39px;
-    margin-top: -5px;
-    padding-left: 5px;
+  border-radius: 50%;
+  width: 39px;
+  height: 39px;
+  margin-left: 10px;
 }
 
 .logOut {
-    display: inline;
-    padding-left: 50px;
-}
-.topFix {
-    margin-top: -10px;
+  display: inline;
+  padding-left: 50px;
 }

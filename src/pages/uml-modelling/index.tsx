@@ -197,4 +197,8 @@ class UmlModelling extends React.Component<Props, State> {
   }
 }
 
+export const UmlModellingWrapper: React.FC = () => {
+  return <UmlModelling />;
+};
+
 export default UmlModelling;
