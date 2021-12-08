@@ -42,7 +42,7 @@ const Navbar = (props: Props) => {
         ))}
 
         <img
-          src={role === "Student" ? defaultStudent : defaultAdmin}
+          src={role === "ROLE_STUDENT" ? defaultStudent : defaultAdmin}
           className={styles.image}
           alt=""
         />

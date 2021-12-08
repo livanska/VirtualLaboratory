@@ -4,12 +4,33 @@ import figure from "../../assets/backgroundFigure.svg";
 import Button from "../../components/shared/Button";
 import FieldGroup from "../../components/shared/FieldGroup";
 import GlassPanel from "../../components/shared/GlassPanel";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import styles from "./styles.module.scss";
-import { RegisterRoute } from "../../routes/routes";
+import { MainPageRoute, RegisterRoute } from "../../routes/routes";
+import { useState } from "react";
 
 const SignIn = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const logIn = () => {
+    var data = {
+      "email": email,
+      "password": password
+    }
+    var headers = {
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin': '*',
+    }
+    fetch('https://vlpz-backend.herokuapp.com/api/auth/signin', { method:'POST', headers: headers, body: JSON.stringify(data) })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+       localStorage.setItem('user', data.role)
+       window.location.href = MainPageRoute
+      });
+  }
   return (
     <>
       <img src={figure} className={styles.figure} />
@@ -23,15 +44,15 @@ const SignIn = () => {
 
           <div className={styles.signInForm}>
             <div className={styles.signInInputs}>
-              <FieldGroup title="Email" />
-              <FieldGroup title="Password" />
+              <FieldGroup title="Email" fieldProps={{ value: email, onChange: (e) => { setEmail(e.target.value) } }} />
+              <FieldGroup title="Password" fieldProps={{ value: password, onChange: (e) => { setPassword(e.target.value) }, type: 'password' }} />
             </div>
 
             <p className={styles.registerText}>
               Don’t have an account yet?{" "}
               <Link className={styles.registerLink} to={RegisterRoute}>Register now</Link>
             </p>
-            <Button buttonstyle="primary" className={styles.signInButton}>
+            <Button buttonstyle="primary" className={styles.signInButton} onClick={logIn}>
               Log In
             </Button>
           </div>

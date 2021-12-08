@@ -8,20 +8,20 @@ import Navbar from "../components/shared/Navbar";
 
 const role = localStorage.getItem("user");
 
-export const routes = role === "Student" ? studentRoutes : adminRoutes;
+export const routes = role === "ROLE_STUDENT" ? studentRoutes : adminRoutes;
 export const RootRouter = () => {
 
   return (
     <>
       <Router>
-        {role && role === "Student" ? (
+        {role && role === "ROLE_STUDENT" ? (
           <StudentRouter />
-        ) : role === "Admin" ? (
+        ) : role === "ROLE_ADMIN" ? (
           <AdminRouter />
         ) : (
           <SignIn />
         )}
-        {(role === "Student" || role === "Admin") && <Navbar />}
+        {(role === "ROLE_STUDENT" || role === "ROLE_ADMIN") && <Navbar />}
       </Router>
     </>
   );

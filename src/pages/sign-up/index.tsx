@@ -7,9 +7,37 @@ import GlassPanel from "../../components/shared/GlassPanel";
 import background from "../../assets/background.svg";
 import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
-import { LoginRoute } from "../../routes/routes";
+import { LoginRoute, MainPageRoute } from "../../routes/routes";
+import { useState } from "react";
 
 const SignUp = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const Register = () => {
+    var data = {
+      "email": email,
+      "password": password,
+      "confirmPassword":confirmPassword,
+      "name":firstName,
+      "surname": lastName
+    }
+    var headers = {
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin': '*',
+    }
+    fetch('https://vlpz-backend.herokuapp.com/api/auth/signin', { method:'POST', headers: headers, body: JSON.stringify(data) })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+       localStorage.setItem('user', data.role)
+       window.location.href = MainPageRoute
+      });
+  }
+
   return (
     <>
       <img src={figure} className={styles.figure} />
@@ -26,19 +54,19 @@ const SignUp = () => {
 
           <div className={styles.signUpForm}>
             <div className={styles.signUpInputs}>
-              <FieldGroup title="Email*" />
-              <FieldGroup title="Password*" />
-              <FieldGroup title="Confirm Password*" />
-              <FieldGroup title="First Name" />
-              <FieldGroup title="Last Name" />
+            <FieldGroup title="Email*" fieldProps={{ value: email, onChange: (e) => { setEmail(e.target.value) } }} />
+              <FieldGroup title="Password*" fieldProps={{ value: password, onChange: (e) => { setPassword(e.target.value) } }} />
+              <FieldGroup title="Confirm Password*" fieldProps={{ value: confirmPassword, onChange: (e) => { setConfirmPassword(e.target.value) } }}/>
+              <FieldGroup title="First Name" fieldProps={{ value: firstName, onChange: (e) => { setFirstName(e.target.value) } }} />
+              <FieldGroup title="Last Name" fieldProps={{ value: lastName, onChange: (e) => { setLastName(e.target.value) } }}/>
             </div>
 
             <p className={styles.loginText}>
               Already a member?{" "}
-              <Link className={styles.loginLink} to={LoginRoute}>Register now</Link>
+              <Link className={styles.loginLink} to={LoginRoute}>Log in</Link>
             </p>
 
-            <Button buttonstyle="primary" className={styles.signUpButton}>
+            <Button buttonstyle="primary" className={styles.signUpButton} onClick={Register}>
               Register
             </Button>
           </div>
