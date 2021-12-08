@@ -2,9 +2,35 @@
   height: calc(100vh - 80px);
   margin-top: 80px;
   padding: 30px;
+  overflow-y: auto;
 }
 
 .panel {
   height: 100%;
-  padding: 20px;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    overflow-y: auto;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
 }
