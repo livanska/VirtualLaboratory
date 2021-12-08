@@ -1,0 +1,30 @@
+@import "~@clientio/rappid/rappid.css";
+
+.workingArea {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+
+  .canvas {
+    width: 100%;
+    height: 100%;
+
+    .paper-scroller-background {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .joint-paper {
+      border: 1px solid #a0a0a0;
+      width: 100% !important;
+      height: 100% !important;
+      left: 0 !important;
+      top: 0 !important;
+    }
+  }
+}
