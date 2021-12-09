@@ -1,0 +1,61 @@
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 30px;
+  width: 700px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 29px;
+  color: #2f2f2f;
+  margin: 0;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 29px;
+  color: #2f2f2f;
+  margin: 0;
+  word-wrap: break-word;
+  margin-top: 20px;
+}
+
+.mainBlock {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  column-gap: 15px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.bold {
+  font-weight: bold;
+  margin: 0;
+}
+
+.delete {
+  position: absolute;
+  font-weight: bold;
+  top: 30px;
+  right: 30px;
+}
