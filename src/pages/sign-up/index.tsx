@@ -40,7 +40,7 @@ const SignUp = () => {
         return response.json();
       })
       .then((data) => {
-        if (!data.ok) throw Error();
+        if (data.errorCode) throw Error();
 
         localStorage.setItem("user", data.role);
         window.location.href = MainPageRoute;

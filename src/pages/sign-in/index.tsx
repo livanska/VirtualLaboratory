@@ -34,7 +34,8 @@ const SignIn = () => {
         return response.json();
       })
       .then((data) => {
-        if (!data.ok) throw Error();
+        console.log(data);
+        if (!data.email) throw Error();
 
         localStorage.setItem("user", data.role);
         window.location.href = MainPageRoute;
