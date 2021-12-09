@@ -17,7 +17,15 @@ const role = localStorage.getItem("user");
 const Navbar = (props: Props) => {
   const location = useLocation();
   const logOut = () => {
+    var headers = {
+      "Content-Type": "application/json",
+      'Access-Control-Allow-Origin': '*',
+    }
     localStorage.setItem('user','');
+    fetch(' https://vlpz-backend.herokuapp.com/api/auth/signout', { method:'GET', headers: headers})
+      .then((response) => {
+        return response.json();
+      })
     window.location.href = LoginRoute;
   };
 

@@ -16,25 +16,26 @@ const SignUp = () => {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [lastName, setLastName] = useState('')
   const [firstName, setFirstName] = useState('')
-  const Register = () => {
+  const register = () => {
+
     var data = {
       "email": email,
       "password": password,
-      "confirmPassword":confirmPassword,
-      "name":firstName,
+      "confirmPassword": confirmPassword,
+      "name": firstName,
       "surname": lastName
     }
     var headers = {
       "Content-Type": "application/json",
       'Access-Control-Allow-Origin': '*',
     }
-    fetch('https://vlpz-backend.herokuapp.com/api/auth/signin', { method:'POST', headers: headers, body: JSON.stringify(data) })
+    fetch('https://vlpz-backend.herokuapp.com/api/auth/signin', { method: 'POST', headers: headers, body: JSON.stringify(data) })
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-       localStorage.setItem('user', data.role)
-       window.location.href = MainPageRoute
+        localStorage.setItem('user', data.role)
+        window.location.href = MainPageRoute
       });
   }
 
@@ -54,11 +55,11 @@ const SignUp = () => {
 
           <div className={styles.signUpForm}>
             <div className={styles.signUpInputs}>
-            <FieldGroup title="Email*" fieldProps={{ value: email, onChange: (e) => { setEmail(e.target.value) } }} />
+              <FieldGroup title="Email*" fieldProps={{ value: email, onChange: (e) => { setEmail(e.target.value) } }} />
               <FieldGroup title="Password*" fieldProps={{ value: password, onChange: (e) => { setPassword(e.target.value) } }} />
-              <FieldGroup title="Confirm Password*" fieldProps={{ value: confirmPassword, onChange: (e) => { setConfirmPassword(e.target.value) } }}/>
+              <FieldGroup title="Confirm Password*" fieldProps={{ value: confirmPassword, onChange: (e) => { setConfirmPassword(e.target.value) } }} />
               <FieldGroup title="First Name" fieldProps={{ value: firstName, onChange: (e) => { setFirstName(e.target.value) } }} />
-              <FieldGroup title="Last Name" fieldProps={{ value: lastName, onChange: (e) => { setLastName(e.target.value) } }}/>
+              <FieldGroup title="Last Name" fieldProps={{ value: lastName, onChange: (e) => { setLastName(e.target.value) } }} />
             </div>
 
             <p className={styles.loginText}>
@@ -66,7 +67,7 @@ const SignUp = () => {
               <Link className={styles.loginLink} to={LoginRoute}>Log in</Link>
             </p>
 
-            <Button buttonstyle="primary" className={styles.signUpButton} onClick={Register}>
+            <Button buttonstyle="primary" className={styles.signUpButton} onClick={register}>
               Register
             </Button>
           </div>

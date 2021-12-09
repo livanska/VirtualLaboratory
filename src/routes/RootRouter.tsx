@@ -11,19 +11,16 @@ const role = localStorage.getItem("user");
 export const routes = role === "ROLE_STUDENT" ? studentRoutes : adminRoutes;
 export const RootRouter = () => {
 
-  return (
-    <>
-      <Router>
-        {role && role === "ROLE_STUDENT" ? (
-          <StudentRouter />
-        ) : role === "ROLE_ADMIN" ? (
-          <AdminRouter />
-        ) : (
-          <SignIn />
-        )}
-        {(role === "ROLE_STUDENT" || role === "ROLE_ADMIN") && <Navbar />}
-      </Router>
-    </>
-  );
+    return (
+        <>
+            <Router>
+                {role && role === "ROLE_STUDENT" ?
+                    <StudentRouter /> :
+                    <AdminRouter />
+                }
+                {(role === "ROLE_STUDENT" || role === "ROLE_ADMIN") && <Navbar />}
+            </Router>
+        </>
+    );
 };
 
