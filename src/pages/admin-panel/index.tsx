@@ -14,9 +14,9 @@ const AdminPanel = () => {
           <div className={styles.content}>
             <div className={styles.left}>
               <ProfileInfo
-                fullName="Ivan Ivanov"
-                role="Student"
-                email="oleh@gmail.com"
+                fullName="Admin"
+                role="Admin"
+                email="admin@lpnu.ua"
                 onChangeName={function (): void {
                   throw new Error("Function not implemented.");
                 }}

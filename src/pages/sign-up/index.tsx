@@ -31,7 +31,7 @@ const SignUp = () => {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
     };
-    fetch("https://vlpz-backend.herokuapp.com/api/auth/signin", {
+    fetch("https://vlpz-backend.herokuapp.com/api/auth/signup", {
       method: "POST",
       headers: headers,
       body: JSON.stringify(data),
@@ -40,7 +40,7 @@ const SignUp = () => {
         return response.json();
       })
       .then((data) => {
-        if (data.errorCode) throw Error();
+        if (Array.isArray(data)) throw Error();
 
         localStorage.setItem("user", data.role);
         window.location.href = MainPageRoute;
@@ -66,7 +66,6 @@ const SignUp = () => {
 
           <div className={styles.signUpForm}>
             <div className={styles.signUpInputs}>
-
               <FieldGroup
                 title="Email*"
                 fieldProps={{

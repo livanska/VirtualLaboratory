@@ -1,6 +1,7 @@
 .adminPanel {
   height: calc(100vh - 80px);
   padding: 30px;
+  overflow-y: hidden;
 }
 
 .background {
@@ -16,10 +17,8 @@
 .panel {
   height: calc(100vh - 140px);
   overflow-y: auto;
-  //   height: 100%;
   margin: auto;
   margin-top: 110px;
-//   padding: 20px 100px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
