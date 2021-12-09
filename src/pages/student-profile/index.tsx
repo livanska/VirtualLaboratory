@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import ProfileInfo from "../../components/profile-info";
 import ProfileTaskCard from "../../components/profile-task-card";
 import GlassPanel from "../../components/shared/GlassPanel";
@@ -56,6 +57,27 @@ const MockData = [
 ]
 
 const StudentProfile = () => {
+    
+    const [email, setEmail] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [firstName, setFirstName] = useState('')
+    // const getStudentInfo= async ()=>{
+    //     var headers = {
+    //         "Content-Type": "application/json",
+    //         'Access-Control-Allow-Origin': '*',
+    //       }
+    //       console.log(headers)
+    //       fetch('https://vlpz-backend.herokuapp.com/api/account', { method:'GET', headers: headers,})
+    //         .then((response) => {
+    //           return response.json();
+    //         })
+    //         .then((data) => {
+    //             setEmail(data.email)
+    //             setFirstName(data.name)
+    //             setLastName(data.surname)
+    //         });
+    // }
+   //
     return (<>
         <div className={styles.background} />
         <div>
@@ -63,9 +85,9 @@ const StudentProfile = () => {
                 <div className={styles.content}>
                     <div  className={styles.profile}>
                     <ProfileInfo
-                        fullName="Ivan Ivanov"
+                        fullName={`${firstName} ${lastName}`}
                         role="Student"
-                        email="oleh@gmail.com"
+                        email={`${email}`}
                         onChangeName={function (): void {
                             throw new Error("Function not implemented.");
                         }}

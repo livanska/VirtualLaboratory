@@ -66,6 +66,7 @@ const SignUp = () => {
 
           <div className={styles.signUpForm}>
             <div className={styles.signUpInputs}>
+
               <FieldGroup
                 title="Email*"
                 fieldProps={{
@@ -119,7 +120,6 @@ const SignUp = () => {
                 Log in
               </Link>
             </p>
-
             <Button
               buttonstyle="primary"
               className={styles.signUpButton}
